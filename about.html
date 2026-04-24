@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — SPSPS Faculty of Law 2026 Bar Operations</title>
+  <meta name="description" content="About SPSPS Faculty of Law 2026 Bar Operations." />
+
+  <!-- ✅ Preload this page's above-the-fold images (moved here from index.html where it didn't belong) -->
+  <link rel="preload" as="image" href="assets/images/hero/about-hero-bg.webp">
+  <link rel="preload" as="image" href="assets/images/logos/sidhaya-logo.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600;700;900;1000&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <p class="faculty-label">SPSPS Faculty of Law</p>
+        <h1 class="barops-title">2026 Bar Operations</h1>
+      </div>
+      <div class="header-search" role="search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        Search...
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active" aria-current="page">About Us</a>
+      <a href="funding.html">Funding Initiatives</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="about-hero" aria-label="About Us Hero">
+      <div class="about-hero-content">
+        <!-- Eager: this is the first visible element above the fold -->
+        <img class="about-hero-logo" src="assets/images/logos/sidhaya-logo.webp" alt="Sidhaya — onto greater things"
+          fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- ABOUT US TEXT -->
+    <div class="about-content">
+      <span class="about-badge">About Us</span>
+      <p class="about-description">
+        <strong>SIDHAYA</strong> is the 2026 Bar Operations Committee of <strong>Saint Paul School
+          of Professional Studies</strong>, committed to supporting and uplifting
+        Paulinian bar candidates through dedication, collaboration, and
+        unwavering service—building a strong community of preparation,
+        encouragement, and solidarity for future lawyers.
+      </p>
+    </div>
+
+    <!-- INFINITE CARD CAROUSEL -->
+    <section class="carousel-section" aria-label="Sidhaya symbol cards">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track">
+          <!--
+            ✅ First 2 cards: eager (likely visible in the initial viewport).
+               All others: lazy (the CSS animation will have moved on before they're needed).
+               Duplicate set (aria-hidden): always lazy since they're the second pass.
+          -->
+          <div class="carousel-card">
+            <img src="assets/images/cards/card-1.webp" alt="Sidhaya — name and meaning">
+          </div>
+          <div class="carousel-card">
+            <img src="assets/images/cards/card-2.webp" alt="Laurel Leaves — victory, achievement, and honor">
+          </div>
+          <div class="carousel-card">
+            <img src="assets/images/cards/card-3.webp" alt="Circular Emblem — unity, wholeness and collective effort"
+              loading="lazy">
+          </div>
+          <div class="carousel-card">
+            <img src="assets/images/cards/card-4.webp" alt="Rising Sun with Rays — hope, new beginnings, and success"
+              loading="lazy">
+          </div>
+          <div class="carousel-card">
+            <img src="assets/images/cards/card-5.webp" alt="Gavel — law and justice" loading="lazy">
+          </div>
+          <div class="carousel-card">
+            <img src="assets/images/cards/card-6.webp" alt="Landscape / Field — journey and progress" loading="lazy">
+          </div>
+          <!-- Duplicated set for seamless loop — all lazy -->
+          <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-1.webp" alt=""
+              loading="lazy"></div>
+          <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-2.webp" alt=""
+              loading="lazy"></div>
+          <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-3.webp" alt=""
+              loading="lazy"></div>
+          <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-4.webp" alt=""
+              loading="lazy"></div>
+          <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-5.webp" alt=""
+              loading="lazy"></div>
+          <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-6.webp" alt=""
+              loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE COMMITTEE -->
+    <section class="committee-section" aria-labelledby="committee-heading">
+
+      <!-- EXEC BANNER IMAGE -->
+      <div class="exec-banner">
+        <img src="assets/images/committee/exec.png" alt="The Executive Committee — Floramay Q. Bacus, Bar Operations Chairperson and Dien Pearl Cada, Vice Chairperson" loading="lazy">
+      </div>
+
+      <div class="member-row member-row--row1">
+        <div class="member-grid member-grid--row1">
+          <div class="member-info member-info--row1">
+            <div class="member-strip member-strip--row1">
+              <img src="assets/images/committee/pino.png" alt="Sarah Antonette Pino" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row1">SARAH ANTONETTE PINO</h4>
+            <p class="member-role member-role--row1">Secretariat Committee</p>
+            <p class="member-desc member-desc--row1">Sarah Antonette Pino, our Secretariat Committee Head, is the baby
+              girl of the group—and the only freshie among us.
+              Outgoing, bubbly, and full of energy, she easily blends in and brings a cheerful vibe wherever she goes.
+              But don't let her youth fool you—she's organized,
+              attentive to details, and quick to keep things on track, making her the perfect fit for the Secretariat
+              role. Whether it's managing documents, coordinating
+              tasks, or keeping the team on schedule, Sarah handles it all with efficiency and a bright, positive energy
+              that lifts everyone around her.</p>
+          </div>
+          
+          <div class="member-info member-info--row1">
+            <div class="member-strip member-strip--row1">
+              <img src="assets/images/committee/alcober.png" alt="Fernie Vien Alcober" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row1">FERNIE VIEN ALCOBER</h4>
+            <p class="member-role member-role--row1">Finance Committee Head</p>
+            <p class="member-desc member-desc--row1">This is Fernie Vien Alcober, our Finance Committee Head. She's a
+              Certified Public Accountant who keeps everything in
+              check behind the scenes. She's a smiley, warm presence you'll often see around, but when it comes to work,
+              she means business. With her strong background
+              in accounting and her attention to detail, she makes sure everything is handled properly and responsibly.
+              With Fernie, you get the best of both worlds –
+              light and easy to be around, but solid and dependable where it matters most.</p>
+          </div>
+          <div class="member-info member-info--row1">
+            <div class="member-strip member-strip--row1">
+              <img src="assets/images/committee/sala.png" alt="Elezardo Sala" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row1">ELEZARDO SALA</h4>
+            <p class="member-role member-role--row1">Audit Committee</p>
+            <p class="member-desc member-desc--row1">Keeping everything in check is Elezardo Sala, our team's auditor.
+              Another CPA in the team with a knack for handling
+              finances, he's the kind of person who likes things neat, clear, and in order. He takes his time going
+              through the records, making sure everything is organized,
+              balanced, and right where it should be. Add in his charm, and you've got someone who's not only reliable
+              with the numbers but also easy and enjoyable to work
+              with. With El around, you know the numbers are in good hands.</p>
+          </div>
+          <div class="member-info member-info--row1">
+            <div class="member-strip member-strip--row1">
+              <img src="assets/images/committee/cugtas.png" alt="Maria Trina Celine Cugtas" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row1">MARIA TRINA CELINE CUGTAS</h4>
+            <p class="member-role member-role--row1">Academics Committee Head</p>
+            <p class="member-desc member-desc--row1">Leading the Academics Committee is Maria Trina Celine Cugtas,
+              Trice, as fondly called. She's someone who quietly excels
+              and lets her work speak for itself. She has a strong eye for research and a talent for finding the right
+              resources, making her someone you can always rely on
+              when it comes to scholarly work. Even though she does really well in class, she stays grounded and
+              low-key, always willing to share what she's learned with everyone.
+              With Trina, what she learns doesn't just stay with her – it's something she brings back to help the whole
+              class and the SPSPS community grow.</p>
+          </div>
+        </div>
+      </div>
+      <div class="member-row member-row--row2">
+        <div class="member-grid member-grid--row2">
+          <div class="member-info member-info--row2">
+            <div class="member-strip member-strip--row2">
+              <img src="assets/images/committee/magcuro.png" alt="Rose Ann Magcuro" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row2">ROSE ANN MAGCURO</h4>
+            <p class="member-role member-role--row2">Logistics Committee Head</p>
+            <p class="member-desc member-desc--row2">Rose Ann Magcuro, our Logistics Committee Head, is truly the "mom"
+              of the group – the kind who keeps everything together without making it look hard. She brings a quiet
+              strength and steady efficiency shaped by
+              real-life experience, balancing it all as a mom of three. From admin work to coordination and logistics,
+              she handles everything with ease and intention.
+              More than that, she leads with heart. Soft, nurturing, and deeply grounded in her faith, she looks after
+              the team like family – always ready to step in, stand up, and
+              go the extra mile for the people she cares about, including all of BarOps.</p>
+          </div>
+          <div class="member-info member-info--row2">
+            <div class="member-strip member-strip--row2">
+              <img src="assets/images/committee/ron.png" alt="Jaica Paula Ron" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row2">JAICA PAULA U. RON</h4>
+            <p class="member-role member-role--row2">Program Committee Head</p>
+            <p class="member-desc member-desc--row2">Taking charge of the flow and energy of our events is Jaica Paula
+              Ron, our Program Committee Head – the dynamic "girlie" who knows exactly how to command a room. As someone
+              who's right at home on stage, she has an effortless
+              pull that instantly keeps the crowd engaged, entertained, and fully present. With her quick wit and lively
+              charm, she doesn't just host – she creates an atmosphere.
+              Apart from the spotlight, she is also incredibly dependable, the kind of person who shows up prepared and
+              gives her all in everything she does. When something is
+              placed in her hands, you can trust that she'll carry it through with energy, dedication, and heart.</p>
+          </div>
+          <div class="member-info member-info--row2">
+            <div class="member-strip member-strip--row2">
+              <img src="assets/images/committee/ramirez.png" alt="Mikaela Angelica Ramirez" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row2">MIKAELA ANGELICA A. RAMIREZ</h4>
+            <p class="member-role member-role--row2">Public Affairs Committee Head</p>
+            <p class="member-desc member-desc--row2">Meet Mikaela Angelica Ramirez, our Public Affairs Committee lead –
+              outgoing, dynamic, and effortlessly in tune with the digital world. She brings life to our Bar Operations
+              through her natural flair for social media, turning every
+              platform into a space for connection, engagement, and creativity. With a keen eye for trends and a genuine
+              love for what she does, Michaela makes sure our voice is not only
+              heard, but felt - creating a presence that connects, engages, and leaves a lasting impression on everyone
+              it reaches.</p>
+          </div>
+          <div class="member-info member-info--row2">
+            <div class="member-strip member-strip--row2">
+              <img src="assets/images/committee/malot.png" alt="Aljon Malot" loading="lazy">
+            </div>
+            <h4 class="member-name member-name--row2">ALJON P. MALOT</h4>
+            <p class="member-role member-role--row2">Marketing Committee Head</p>
+            <p class="member-desc member-desc--row2">Aljon Malot heads our Marketing Committee with a mix of creativity,
+              focus, and a presence you can't ignore. With a background in broadcasting, his voice is as strong and
+              commanding as his personality, yet he balances it with a soft,
+              approachable side that makes him easy to work with and get along with. Sharp-eyed and detail-oriented, he
+              knows exactly what needs to be done. While he can keep things
+              light and fun, be sure that when it's time to get serious, he stays calm, keeps his focus, and makes sure
+              everything gets done the right way. With him, there is no room for
+              mediocrity.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-grid">
+      <div class="footer-touch">
+        <h4>Get in Touch</h4>
+        <p>Reach out for any questions or to learn more about our programs</p>
+      </div>
+      <div class="footer-logos" aria-label="Partner logos">
+        <div class="logo-group">
+          <div class="footer-logo-ring">
+            <img src="assets/images/logos/spsps-logo.webp" alt="SPSPS Logo" loading="lazy">
+          </div>
+          <div class="footer-logo-ring">
+            <img src="assets/images/logos/jd-logo.webp" alt="JD Logo" loading="lazy">
+          </div>
+          <div class="footer-logo-ring">
+            <img src="assets/images/logos/sidhaya-logo-white.webp" alt="Sidhaya Logo" loading="lazy">
+          </div>
+        </div>
+        <div class="footer-text">
+          <h4 class="footer-title">
+            <span class="line1">SAINT PAUL SCHOOL OF PROFESSIONAL STUDIES</span><br>
+            <span class="line2">2026 BAR OPERATIONS</span>
+          </h4>
+          <h5 class="footer-address">
+            Campetic Road, Palo, 6501 Leyte, Philippines
+          </h5>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li>
+            <span>0917-245-6789</span>
+            <img src="assets/images/icons/phone.png" alt="Phone" width="14" height="14" loading="lazy">
+          </li>
+          <li>
+            <span><a href="mailto:barops@spsps.edu.ph" style="color: var(--gold); font-size:14px;">barops@spsps.edu.ph</a></span>
+            <img src="assets/images/icons/email.png" alt="Email" width="14" height="14" loading="lazy">
+          </li>
+          <li>
+            <span>spspsbarops</span>
+            <img src="assets/images/icons/facebook.png" alt="Facebook" width="14" height="14" loading="lazy">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Sidhaya. All Rights Reserved.</div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

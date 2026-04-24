@@ -1,0 +1,674 @@
+/* ============================================
+   FUNDING.CSS — Styles exclusive to funding.html
+   SPSPS Faculty of Law — 2026 Bar Operations
+   ============================================ */
+
+/* ══════════════════════════════════════════
+   FADE-UP ANIMATION
+   ══════════════════════════════════════════ */
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+  animation-play-state: paused;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════════
+   DROPDOWN NAV
+   ══════════════════════════════════════════ */
+.nav-dropdown-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  align-items: stretch;
+}
+
+.has-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.dropdown-chevron {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.has-dropdown[aria-expanded="true"] .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  width: max-content;
+  background: var(--green-dark);
+  border-top: 2px solid var(--gold);
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.nav-dropdown.open { display: block; }
+
+.nav-dropdown li a {
+  display: block;
+  padding: 11px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(12px, 1.3vw, 14px);
+  font-weight: 500;
+  color: #9fc89f;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.2s, color 0.2s;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.nav-dropdown li:last-child a { border-bottom: none; }
+.nav-dropdown li a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+/* ══════════════════════════════════════════
+   SECTION 1 — BARRISTERS HERO
+   ══════════════════════════════════════════ */
+.barristers-hero {
+  width: 100%;
+  line-height: 0;
+  height: clamp(300px, 48vw, 600px);
+  overflow: hidden;
+}
+
+.barristers-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* ══════════════════════════════════════════
+   SECTION 2 — SUPPORT OUR CAUSE
+   ══════════════════════════════════════════ */
+.support-section {
+  padding: 0 clamp(16px, 5%, 12.5%);
+  max-width: 1200px;
+  margin: clamp(28px, 4vw, 48px) auto clamp(28px, 4vw, 48px);
+  line-height: 0;
+}
+
+.support-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ══════════════════════════════════════════
+   SECTION 3 — FUN RUN
+   ══════════════════════════════════════════ */
+.funrun-section {
+  width: 100%;
+  padding: 0 0 clamp(28px, 4vw, 48px);
+  background: transparent;
+}
+
+.funrun-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5%, 12.5%);
+}
+
+.funrun-register-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5%, 12.5%) clamp(16px, 2.5vw, 28px);
+  line-height: 0;
+}
+
+.funrun-register-img-wrap {
+  position: relative;
+  display: block;
+  line-height: 0;
+  width: 100%;
+}
+
+.funrun-register-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── REGISTER BUTTON — HTML/CSS pill, anchored bottom-right of banner ──
+   HOW TO ADJUST (desktop):
+     bottom → % of wrapper HEIGHT  (↑ bigger = moves UP)
+     right  → % of wrapper WIDTH   (↑ bigger = moves LEFT)
+   ── */
+.funrun-register-btn {
+  position: absolute;
+  bottom: clamp(6px, 1.8%, 16px);
+  right:  clamp(1px, 15.8%, 116px);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #d4a84b 0%, #c8a84b 45%, #b8923a 100%);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(14px, 1.7vw, 18px);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-decoration: none;
+
+  padding: clamp(10px, 1.6vw, 17px) clamp(22px, 3.4vw, 40px);
+  border-radius: 100px;
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow:
+    0 4px 18px rgba(200,168,75,0.45),
+    0 1px 4px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 10;
+}
+
+.funrun-register-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow:
+    0 8px 28px rgba(200,168,75,0.55),
+    0 2px 6px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.funrun-register-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Race image blocks */
+.race-block {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5%, 12.5%) clamp(16px, 2.5vw, 28px);
+  line-height: 0;
+}
+
+.race-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inclusions note strip */
+.funrun-inclusions-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px clamp(16px, 5%, 12.5%);
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 700;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.funrun-inclusions-note svg {
+  flex-shrink: 0;
+  color: var(--green-dark);
+}
+
+/* ══════════════════════════════════════════
+   SECTION 4 — MERCHANDISE
+   ══════════════════════════════════════════ */
+.merch-section {
+  padding: 0 0 clamp(28px, 4vw, 48px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.merch-banner {
+  background: var(--green-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(20px, 3vw, 36px) clamp(20px, 5%, 12.5%);
+  gap: 16px;
+  margin-bottom: clamp(24px, 4vw, 40px);
+  position: relative;
+  overflow: hidden;
+}
+
+.merch-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(74,122,74,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.merch-banner-sub {
+  font-family: 'cinzel', serif;
+  font-size: clamp(24px, 4.5vw, 52px);
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.merch-banner-title {
+  font-family: 'cinzel', serif;
+  font-size: clamp(38px, 7.2vw, 83px);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.1;
+  position: relative;
+}
+
+.merch-banner-logo {
+  flex-shrink: 0;
+  width: clamp(86px, 14vw, 158px);
+  left: clamp(-80px, -8vw, -40px);
+  position: relative;
+  z-index: 1;
+}
+
+.merch-banner-logo img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.3));
+}
+
+.merch-active-wrap {
+  padding: 0 clamp(16px, 5%, 12.5%);
+  margin-bottom: clamp(8px, 1.5vw, 16px);
+}
+
+.merch-active-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 28px rgba(30,58,30,0.12), 0 1px 6px rgba(0,0,0,0.07);
+  border: 1.5px solid rgba(30,58,30,0.07);
+  min-height: 0;
+}
+
+.merch-active-img-col {
+  overflow: hidden;
+  background: var(--green-dark);
+}
+
+.merch-active-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.merch-active-img.swapping { opacity: 0; }
+
+.merch-active-info {
+  padding: clamp(20px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.merch-active-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(14px, 1.8vw, 20px);
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.3;
+}
+
+.merch-active-price {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(26px, 3.8vw, 42px);
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1;
+}
+
+.merch-active-price sup {
+  font-size: 0.42em;
+  vertical-align: super;
+  font-weight: 400;
+  color: var(--gray-mid);
+}
+
+.merch-info-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-mid);
+  margin-bottom: -6px;
+}
+
+.merch-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.merch-size-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 700;
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.merch-colors {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.merch-color-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  border: 2.5px solid transparent;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.merch-color-swatch:hover { transform: scale(1.15); }
+
+.merch-color-swatch.active {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.swatch-white { background: #ffffff; border-color: #d0d0c8; }
+.swatch-green { background: #1e3a1e; }
+
+.merch-order-btn {
+  display: inline-block;
+  background: var(--green-dark);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(10px, 1.2vw, 13px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+  align-self: flex-start;
+}
+
+.merch-order-btn:hover {
+  background: var(--green-mid);
+  transform: translateY(-1px);
+}
+
+.merch-others-wrap {
+  padding: clamp(20px, 3vw, 40px) clamp(16px, 5%, 12.5%) clamp(16px, 2.5vw, 28px);
+}
+
+.merch-others-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(13px, 1.8vw, 20px);
+  font-weight: 700;
+  color: var(--green-dark);
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: clamp(12px, 2vw, 22px);
+  text-transform: uppercase;
+}
+
+.merch-others-track {
+  display: flex;
+  gap: clamp(8px, 1.5vw, 16px);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 6px;
+  justify-content: center;
+}
+
+.merch-others-track::-webkit-scrollbar { display: none; }
+
+.merch-other-thumb {
+  flex-shrink: 0;
+  width: clamp(140px, 22vw, 220px);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+  cursor: pointer;
+  box-shadow: 0 2px 14px rgba(30,58,30,0.10);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  background: var(--green-dark);
+}
+
+.merch-other-thumb:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(30,58,30,0.20);
+}
+
+.merch-other-thumb.is-active {
+  opacity: 0.38;
+  pointer-events: none;
+  cursor: default;
+}
+
+.merch-other-thumb img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.merch-other-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(8px, 1vw, 10px);
+  font-weight: 700;
+  color: var(--white);
+  background: rgba(30,58,30,0.82);
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Stack on tablet ── */
+@media (max-width: 760px) {
+  .merch-active-card {
+    grid-template-columns: 1fr;
+  }
+  .merch-active-img-col {
+    min-height: clamp(200px, 60vw, 380px);
+    max-height: 420px;
+  }
+  .merch-order-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* ══════════════════════════════════════════
+   SECTION 5 — COMING SOON
+   ══════════════════════════════════════════ */
+.coming-soon-section {
+  padding: 0 clamp(16px, 5%, 12.5%) clamp(40px, 6vw, 80px);
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coming-soon-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: clamp(20px, 3vw, 36px);
+  font-style: italic;
+}
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 2vw, 28px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.coming-soon-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(30,58,30,0.12);
+}
+
+.coming-soon-img-wrap {
+  position: relative;
+  aspect-ratio: 16/10;
+  background: var(--green-mid);
+}
+
+/* Images already have green tint baked in — no extra filter needed */
+.coming-soon-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.8);
+}
+
+.coming-soon-label {
+  background: var(--green-dark);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(11px, 1.6vw, 15px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: clamp(10px, 1.5vw, 16px);
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════ */
+
+/* ── TABLET (≤ 900px) ── */
+@media (max-width: 900px) {
+  .merch-order-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── TABLET PORTRAIT (≤ 640px) ── */
+@media (max-width: 640px) {
+  .barristers-hero {
+    height: clamp(180px, 50vw, 340px);
+  }
+
+  .race-block {
+    padding: 0 clamp(8px, 2%, 16px) clamp(12px, 2vw, 20px);
+  }
+
+  .funrun-inclusions-note {
+    font-size: 11px;
+    padding: 11px 14px;
+  }
+
+  .merch-banner {
+    padding: 18px clamp(16px, 4%, 28px);
+  }
+
+  .merch-banner-logo {
+    width: 52px;
+    opacity: 0.7;
+  }
+
+  .coming-soon-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  /* ── REGISTER BUTTON — mobile overrides ──────────────────────────
+     Button stays overlaid on the image, just repositioned/resized.
+     All % values are relative to .funrun-register-img-wrap:
+       bottom → % of wrapper HEIGHT  (↑ bigger = moves UP)
+       right  → % of wrapper WIDTH   (↑ bigger = moves LEFT)
+       width  → % of wrapper WIDTH   (↑ bigger = wider button)
+       font-size in vw scales with viewport width automatically
+     ──────────────────────────────────────────────────────────────── */
+  .funrun-register-btn {
+    bottom:    3.5%;
+    right:      15%;
+    width:     26%;
+    font-size: 1.8vw;
+    padding:   1% 2.2%;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* ── SMALL MOBILE (≤ 420px) ── */
+@media (max-width: 420px) {
+  .funrun-section-title {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .merch-product-info {
+    padding: 16px;
+  }
+
+  .merch-others-wrap {
+    padding: 20px 16px 12px;
+  }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+}
