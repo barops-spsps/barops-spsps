@@ -288,52 +288,133 @@
     font-size: clamp(24px, 6vw, 38px);
     margin-bottom: 20px;
   }
+}
 
-  /* Member rows — 2-column layout */
+/* ══════════════════════════════════════════
+   MEMBER ROW — MOBILE SWIPE CAROUSEL
+   Active at ≤ 768px.
+   Each .member-row becomes a horizontal
+   scroll container; cards snap one at a time.
+   Desktop (> 768px) is completely untouched.
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Row wrapper clips the scrolling grid */
+  .member-row--row1,
+  .member-row--row2 {
+    overflow: hidden;
+    position: relative;
+    margin-top: clamp(20px, 4vw, 36px);
+    margin-bottom: 0;
+  }
+
+  /* Grid becomes a horizontal flex strip with snap */
   .member-grid--row1,
   .member-grid--row2 {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    grid-template-columns: unset;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0;
+    padding-bottom: 12px;
   }
 
-  .member-strip--row1,
-  .member-strip--row2 {
-    height: clamp(140px, 36vw, 220px);
+  .member-grid--row1::-webkit-scrollbar,
+  .member-grid--row2::-webkit-scrollbar { display: none; }
+
+  /* Each card occupies ~82% of the viewport width so
+     the next card peeks from the right */
+  .member-info--row1,
+  .member-info--row2 {
+    flex: 0 0 82vw;
+    max-width: 340px;
+    scroll-snap-align: start;
+    border-right: 1px solid #e0e0d8;
+    border-bottom: none;
+    padding: 0 14px 16px;
+    margin: 0;
   }
 
-  /* Remove right border from even columns (2nd & 4th) */
-  .member-info--row1:nth-child(even),
-  .member-info--row2:nth-child(even) {
+  .member-info--row1:last-child,
+  .member-info--row2:last-child {
     border-right: none;
   }
 
-  /* Add bottom border between the two rows of cards */
-  .member-info--row1:nth-child(1),
-  .member-info--row1:nth-child(2),
-  .member-info--row2:nth-child(1),
-  .member-info--row2:nth-child(2) {
-    border-bottom: 1px solid #e0e0d8;
-    padding-bottom: 14px;
-    margin-bottom: 4px;
+  /* Photo strip */
+  .member-strip--row1,
+  .member-strip--row2 {
+    height: clamp(160px, 52vw, 260px);
   }
 
-  .member-info--row1,
-  .member-info--row2 {
-    padding: 10px clamp(6px, 2vw, 14px);
-  }
-
+  /* Text */
   .member-name--row1,
-  .member-name--row2 {
-    font-size: clamp(11px, 2.8vw, 14px);
-  }
+  .member-name--row2 { font-size: clamp(11px, 3vw, 14px); }
 
   .member-role--row1,
-  .member-role--row2 {
-    font-size: clamp(9px, 2vw, 11px);
-  }
+  .member-role--row2 { font-size: clamp(9px, 2.2vw, 11px); }
 
   .member-desc--row1,
-  .member-desc--row2 {
-    font-size: clamp(10px, 2.2vw, 12px);
+  .member-desc--row2 { font-size: clamp(10px, 2.4vw, 12px); }
+
+  /* ── Dot indicators ── */
+  .member-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 0 6px;
+  }
+
+  .member-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(30, 58, 30, 0.2);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.25s, width 0.25s, border-radius 0.25s;
+    min-width: 7px;
+  }
+
+  .member-dot.active {
+    background: var(--green-dark);
+    width: 20px;
+    border-radius: 4px;
+  }
+
+  /* ── Swipe hint label ── */
+  .member-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 4px 16px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--gray-mid);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .member-swipe-hint.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .member-swipe-hint svg {
+    flex-shrink: 0;
+    animation: swipeNudge 1.4s ease-in-out infinite;
+  }
+
+  @keyframes swipeNudge {
+    0%, 100% { transform: translateX(0); }
+    50%       { transform: translateX(5px); }
   }
 }
 
@@ -343,40 +424,11 @@
     width: clamp(170px, 68vw, 280px);
   }
 
-  /* Single column */
-  .member-grid--row1,
-  .member-grid--row2 {
-    grid-template-columns: 1fr;
-  }
-
-  .member-strip--row1,
-  .member-strip--row2 {
-    height: clamp(200px, 60vw, 300px);
-  }
-
-  /* Every card gets a bottom divider, remove all right borders */
+  /* Slightly wider cards on small screens */
   .member-info--row1,
   .member-info--row2 {
-    border-right: none !important;
-    border-bottom: 1px solid #e0e0d8;
-    padding: 0 0 16px 0;
-    margin-bottom: 8px;
+    flex: 0 0 88vw;
   }
-
-  .member-info--row1:last-child,
-  .member-info--row2:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-
-  .member-name--row1,
-  .member-name--row2 { font-size: 13px; }
-
-  .member-role--row1,
-  .member-role--row2 { font-size: 10px; }
-
-  .member-desc--row1,
-  .member-desc--row2 { font-size: 11px; }
 }
 
 /* ── REDUCED MOTION ─────────────────────── */

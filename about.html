@@ -126,7 +126,14 @@
       </div>
 
       <div class="member-row member-row--row1">
-        <div class="member-grid member-grid--row1">
+        <div class="member-swipe-hint" id="swipeHint1" aria-hidden="true">
+          Swipe
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+            <polyline points="9 6 15 12 9 18"/>
+          </svg>
+        </div>
+        <div class="member-grid member-grid--row1" id="memberGrid1">
           <div class="member-info member-info--row1">
             <div class="member-strip member-strip--row1">
               <img src="assets/images/committee/pino.png" alt="Sarah Antonette Pino" loading="lazy">
@@ -186,10 +193,19 @@
               With Trina, what she learns doesn't just stay with her – it's something she brings back to help the whole
               class and the SPSPS community grow.</p>
           </div>
-        </div>
-      </div>
+        </div><!-- /.member-grid--row1 -->
+        <div class="member-dots" id="memberDots1" role="tablist" aria-label="Row 1 member navigation"></div>
+      </div><!-- /.member-row--row1 -->
+
       <div class="member-row member-row--row2">
-        <div class="member-grid member-grid--row2">
+        <div class="member-swipe-hint" id="swipeHint2" aria-hidden="true">
+          Swipe
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+            <polyline points="9 6 15 12 9 18"/>
+          </svg>
+        </div>
+        <div class="member-grid member-grid--row2" id="memberGrid2">
           <div class="member-info member-info--row2">
             <div class="member-strip member-strip--row2">
               <img src="assets/images/committee/magcuro.png" alt="Rose Ann Magcuro" loading="lazy">
@@ -230,7 +246,7 @@
               outgoing, dynamic, and effortlessly in tune with the digital world. She brings life to our Bar Operations
               through her natural flair for social media, turning every
               platform into a space for connection, engagement, and creativity. With a keen eye for trends and a genuine
-              love for what she does, Michaela makes sure our voice is not only
+              love for what she does, Mikaela makes sure our voice is not only
               heard, but felt - creating a presence that connects, engages, and leaves a lasting impression on everyone
               it reaches.</p>
           </div>
@@ -249,8 +265,9 @@
               everything gets done the right way. With him, there is no room for
               mediocrity.</p>
           </div>
-        </div>
-      </div>
+        </div><!-- /.member-grid--row2 -->
+        <div class="member-dots" id="memberDots2" role="tablist" aria-label="Row 2 member navigation"></div>
+      </div><!-- /.member-row--row2 -->
 
     </section>
 
@@ -305,6 +322,7 @@
     <div class="footer-bottom">&copy; 2026 Sidhaya. All Rights Reserved.</div>
   </footer>
 
+  <script src="assets/js/about.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

@@ -208,7 +208,7 @@
           '<button class="search-close-btn" id="searchCloseBtn" aria-label="Close search">Close</button>' +
         '</div>' +
         '<div class="search-modal-body" id="searchBody">' +
-          '<p class="search-hint">Try searching "fun run", "merch", "polo", "Pino", "volunteer"...</p>' +
+          '<p class="search-hint">Try searching "fun run", "merch", "polo", "volunteer"...</p>' +
         '</div>' +
       '</div>';
 

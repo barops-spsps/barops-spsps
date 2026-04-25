@@ -17,7 +17,7 @@
       name:  'Sidhaya Two-Tone\nTote Bag',
       price: '499.00',
       sizeLabel: 'Available Size:',
-      sizes: ['12 x 16 Inches'],
+      sizes: ['16 X 13 Inches'],
       thumbImg: 'assets/images/merch/tote_bag.png',
       thumbLabel: 'Tote Bag',
       colors: [
@@ -55,22 +55,22 @@
     {
       key:   'polo',
       name:  'Paulinian Law\nEmbroidered Polo Shirt',
-      price: '725.00',
+      price: '730.00',
       sizeLabel: 'Available Sizes:',
       sizes: ['Small', 'Medium', 'Large', 'XLarge', '2XLarge', '3XLarge'],
-      thumbImg: 'assets/images/merch/white_poloshirt.png',
+      thumbImg: 'assets/images/merch/white_poloshirt.jpg',
       thumbLabel: 'Polo Shirt',
       colors: [
         {
           label:  'White',
           swatch: 'swatch-white',
-          img:    'assets/images/merch/white_poloshirt.png',
+          img:    'assets/images/merch/white_poloshirt.jpg',
           imgAlt: 'Paulinian Law Embroidered Polo Shirt — White'
         },
         {
           label:  'Dark Green',
           swatch: 'swatch-green',
-          img:    'assets/images/merch/green_poloshirt.png',
+          img:    'assets/images/merch/green_poloshirt.jpg',
           imgAlt: 'Paulinian Law Embroidered Polo Shirt — Dark Green'
         }
       ]
