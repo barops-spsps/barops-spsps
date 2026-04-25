@@ -1,9 +1,4 @@
-/* ============================================
-   ABOUT.CSS — Styles exclusive to about.html
-   SPSPS Faculty of Law — 2026 Bar Operations
-   ============================================ */
 
-/* ── HERO ── */
 .about-hero {
   position: relative;
   width: 100%;
@@ -52,7 +47,7 @@
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* ── ABOUT CONTENT ── */
+
 .about-content {
   padding: clamp(28px, 4vw, 52px) clamp(16px, 5%, 12.5%) clamp(20px, 3vw, 36px);
   text-align: center;
@@ -92,7 +87,7 @@
   font-weight: 700;
 }
 
-/* ── INFINITE CAROUSEL ── */
+
 .carousel-section {
   padding: clamp(16px, 2vw, 28px) 0 clamp(36px, 5vw, 60px);
   overflow: hidden;
@@ -147,15 +142,13 @@
   display: block;
 }
 
-/* ── KEYFRAMES ── */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ══════════════════════════════════════════
-   EXEC BANNER IMAGE
-   ══════════════════════════════════════════ */
+
 
 .committee-section {
   padding: clamp(40px, 6vw, 80px) clamp(16px, 5%, 8%) clamp(48px, 7vw, 96px);
@@ -175,13 +168,7 @@
   border-radius: 16px;
 }
 
-/* ══════════════════════════════════════════
-   MEMBER ROWS — FULLY RESPONSIVE
-   No transforms, no negative margins.
-   Uses CSS Grid + clamp() throughout.
-   ══════════════════════════════════════════ */
 
-/* ── SHARED member row base ── */
 
 .member-row--row1,
 .member-row--row2 {
@@ -190,7 +177,7 @@
   
 }
 
-/* ── SHARED member grid base ── */
+
 .member-grid--row1,
 .member-grid--row2 {
   display: grid;
@@ -199,7 +186,7 @@
   
 }
 
-/* ── SHARED member info ── */
+
 .member-info--row1,
 .member-info--row2 {
   padding: 0 clamp(8px, 1.5vw, 16px) clamp(12px, 2vw, 20px);
@@ -211,12 +198,12 @@
   border-right: none;
 }
 
-/* ── SHARED image strip ── */
+
 .member-strip--row1,
 .member-strip--row2 {
   width: 100%;
   overflow: hidden;
-  height: clamp(120px, 18vw, 250px); /* ← adjust to zoom image in/out */
+  height: clamp(120px, 18vw, 250px); 
   margin-bottom: 12px;
   border-bottom: 6px solid var(--green-dark);
 }
@@ -227,10 +214,10 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: top center; /* ← adjust to shift face up/down */
+  object-position: top center; 
 }
 
-/* ── SHARED text styles ── */
+
 .member-name--row1,
 .member-name--row2 {
   text-transform: uppercase;
@@ -261,11 +248,7 @@
   line-height: 1.65;
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE BREAKPOINTS
-   ══════════════════════════════════════════ */
 
-/* ── TABLET LANDSCAPE (≤ 1100px) ────────── */
 @media (max-width: 1100px) {
   .committee-title {
     transform: none;
@@ -277,7 +260,7 @@
   }
 }
 
-/* ── TABLET PORTRAIT (≤ 768px) ──────────── */
+
 @media (max-width: 768px) {
   .carousel-card {
     width: clamp(230px, 75vw, 320px);
@@ -290,16 +273,10 @@
   }
 }
 
-/* ══════════════════════════════════════════
-   MEMBER ROW — MOBILE SWIPE CAROUSEL
-   Active at ≤ 768px.
-   Each .member-row becomes a horizontal
-   scroll container; cards snap one at a time.
-   Desktop (> 768px) is completely untouched.
-   ══════════════════════════════════════════ */
+
 @media (max-width: 768px) {
 
-  /* Row wrapper clips the scrolling grid */
+ 
   .member-row--row1,
   .member-row--row2 {
     overflow: hidden;
@@ -308,7 +285,7 @@
     margin-bottom: 0;
   }
 
-  /* Grid becomes a horizontal flex strip with snap */
+ 
   .member-grid--row1,
   .member-grid--row2 {
     display: flex;
@@ -326,8 +303,7 @@
   .member-grid--row1::-webkit-scrollbar,
   .member-grid--row2::-webkit-scrollbar { display: none; }
 
-  /* Each card occupies ~82% of the viewport width so
-     the next card peeks from the right */
+  
   .member-info--row1,
   .member-info--row2 {
     flex: 0 0 82vw;
@@ -344,13 +320,13 @@
     border-right: none;
   }
 
-  /* Photo strip */
+  
   .member-strip--row1,
   .member-strip--row2 {
     height: clamp(160px, 52vw, 260px);
   }
 
-  /* Text */
+  
   .member-name--row1,
   .member-name--row2 { font-size: clamp(11px, 3vw, 14px); }
 
@@ -360,7 +336,7 @@
   .member-desc--row1,
   .member-desc--row2 { font-size: clamp(10px, 2.4vw, 12px); }
 
-  /* ── Dot indicators ── */
+  
   .member-dots {
     display: flex;
     justify-content: center;
@@ -386,7 +362,7 @@
     border-radius: 4px;
   }
 
-  /* ── Swipe hint label ── */
+  
   .member-swipe-hint {
     display: flex;
     align-items: center;
@@ -418,20 +394,20 @@
   }
 }
 
-/* ── SMALL MOBILE (≤ 480px) ─────────────── */
+
 @media (max-width: 480px) {
   .about-hero-logo {
     width: clamp(170px, 68vw, 280px);
   }
 
-  /* Slightly wider cards on small screens */
+  
   .member-info--row1,
   .member-info--row2 {
     flex: 0 0 88vw;
   }
 }
 
-/* ── REDUCED MOTION ─────────────────────── */
+
 @media (prefers-reduced-motion: reduce) {
   .carousel-track { animation: none; }
   .about-hero-logo, .about-badge, .about-description { animation: none; }

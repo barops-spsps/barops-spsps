@@ -1,11 +1,4 @@
-/* ============================================
-   FUNDING.CSS — Styles exclusive to funding.html
-   SPSPS Faculty of Law — 2026 Bar Operations
-   ============================================ */
 
-/* ══════════════════════════════════════════
-   FADE-UP ANIMATION
-   ══════════════════════════════════════════ */
 .fade-up {
   animation: fadeUp 0.7s ease both;
   animation-play-state: paused;
@@ -15,9 +8,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ══════════════════════════════════════════
-   DROPDOWN NAV
-   ══════════════════════════════════════════ */
+
 .nav-dropdown-wrap {
   position: relative;
   flex: 1;
@@ -77,9 +68,7 @@
 .nav-dropdown li:last-child a { border-bottom: none; }
 .nav-dropdown li a:hover { background: rgba(255,255,255,0.08); color: #fff; }
 
-/* ══════════════════════════════════════════
-   SECTION 1 — BARRISTERS HERO
-   ══════════════════════════════════════════ */
+
 .barristers-hero {
   width: 100%;
   line-height: 0;
@@ -95,9 +84,7 @@
   object-position: center bottom;
 }
 
-/* ══════════════════════════════════════════
-   SECTION 2 — SUPPORT OUR CAUSE
-   ══════════════════════════════════════════ */
+
 .support-section {
   padding: 0 clamp(16px, 5%, 12.5%);
   max-width: 1200px;
@@ -112,9 +99,7 @@
   border-radius: 12px;
 }
 
-/* ══════════════════════════════════════════
-   SECTION 3 — FUN RUN
-   ══════════════════════════════════════════ */
+
 .funrun-section {
   width: 100%;
   padding: 0 0 clamp(28px, 4vw, 48px);
@@ -147,11 +132,7 @@
   display: block;
 }
 
-/* ── REGISTER BUTTON — HTML/CSS pill, anchored bottom-right of banner ──
-   HOW TO ADJUST (desktop):
-     bottom → % of wrapper HEIGHT  (↑ bigger = moves UP)
-     right  → % of wrapper WIDTH   (↑ bigger = moves LEFT)
-   ── */
+
 .funrun-register-btn {
   position: absolute;
   bottom: clamp(6px, 1.8%, 16px);
@@ -196,7 +177,7 @@
   transform: translateY(0) scale(0.98);
 }
 
-/* Race image blocks */
+
 .race-block {
   max-width: 1200px;
   margin: 0 auto;
@@ -210,7 +191,7 @@
   display: block;
 }
 
-/* Inclusions note strip */
+
 .funrun-inclusions-note {
   display: flex;
   align-items: center;
@@ -233,9 +214,7 @@
   color: var(--green-dark);
 }
 
-/* ══════════════════════════════════════════
-   SECTION 4 — MERCHANDISE
-   ══════════════════════════════════════════ */
+
 .merch-section {
   padding: 0 0 clamp(28px, 4vw, 48px);
   max-width: 1200px;
@@ -510,7 +489,7 @@
   letter-spacing: 0.5px;
 }
 
-/* ── Stack on tablet ── */
+
 @media (max-width: 760px) {
   .merch-active-card {
     grid-template-columns: 1fr;
@@ -525,9 +504,7 @@
   }
 }
 
-/* ══════════════════════════════════════════
-   SECTION 5 — COMING SOON
-   ══════════════════════════════════════════ */
+
 .coming-soon-section {
   padding: 0 clamp(16px, 5%, 12.5%) clamp(40px, 6vw, 80px);
   text-align: center;
@@ -564,7 +541,7 @@
   background: var(--green-mid);
 }
 
-/* Images already have green tint baked in — no extra filter needed */
+
 .coming-soon-img-wrap img {
   width: 100%;
   height: 100%;
@@ -593,11 +570,7 @@
   text-align: center;
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE BREAKPOINTS
-   ══════════════════════════════════════════ */
 
-/* ── TABLET (≤ 900px) ── */
 @media (max-width: 900px) {
   .merch-order-btn {
     width: 100%;
@@ -605,7 +578,7 @@
   }
 }
 
-/* ── TABLET PORTRAIT (≤ 640px) ── */
+
 @media (max-width: 640px) {
   .barristers-hero {
     height: clamp(180px, 50vw, 340px);
@@ -634,14 +607,7 @@
     max-width: 400px;
   }
 
-  /* ── REGISTER BUTTON — mobile overrides ──────────────────────────
-     Button stays overlaid on the image, just repositioned/resized.
-     All % values are relative to .funrun-register-img-wrap:
-       bottom → % of wrapper HEIGHT  (↑ bigger = moves UP)
-       right  → % of wrapper WIDTH   (↑ bigger = moves LEFT)
-       width  → % of wrapper WIDTH   (↑ bigger = wider button)
-       font-size in vw scales with viewport width automatically
-     ──────────────────────────────────────────────────────────────── */
+
   .funrun-register-btn {
     bottom:    3.5%;
     right:      15%;
@@ -652,7 +618,7 @@
   }
 }
 
-/* ── SMALL MOBILE (≤ 420px) ── */
+
 @media (max-width: 420px) {
   .funrun-section-title {
     font-size: 16px;
@@ -668,7 +634,7 @@
   }
 }
 
-/* ── REDUCED MOTION ── */
+
 @media (prefers-reduced-motion: reduce) {
   .fade-up { animation: none; }
 }

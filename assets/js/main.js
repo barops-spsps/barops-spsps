@@ -1,18 +1,11 @@
-/* ============================================
-   MAIN.JS — Shared scripts for all pages
-   SPSPS Faculty of Law — 2026 Bar Operations
-   ============================================ */
+
 
 (function () {
 
-  /* ══════════════════════════════════════════
-     SEARCH INDEX
-     Each entry: { title, desc, page, hash }
-     hash: optional anchor to scroll to on the target page
-  ══════════════════════════════════════════ */
+ 
   var SEARCH_INDEX = [
 
-    /* ── HOME ── */
+    
     {
       title: 'Home',
       desc: 'SPSPS Faculty of Law 2026 Bar Operations landing page.',
@@ -38,7 +31,7 @@
       hash: ''
     },
 
-    /* ── ABOUT ── */
+    
     {
       title: 'About SIDHAYA',
       desc: 'SIDHAYA is the 2026 Bar Operations Committee of Saint Paul School of Professional Studies, committed to supporting and uplifting Paulinian bar candidates through dedication, collaboration, and unwavering service — building a strong community of preparation, encouragement, and solidarity for future lawyers.',
@@ -100,7 +93,7 @@
       hash: ''
     },
 
-    /* ── FUNDING ── */
+    
     {
       title: 'Funding Initiatives',
       desc: 'Support the SPSPS 2026 Bar Operations through merch, fun run, raffle draw, and webinar series.',
@@ -168,7 +161,7 @@
       hash: '#webinar'
     },
 
-    /* ── CONTACT / SHARED ── */
+    
     {
       title: 'Contact Us',
       desc: 'Phone: 0917-245-6789. Email: barops@spsps.edu.ph. Facebook: spspsbarops. Address: Campetic Road, Palo, 6501 Leyte, Philippines.',
@@ -183,9 +176,7 @@
     }
   ];
 
-  /* ══════════════════════════════════════════
-     BUILD MODAL HTML
-  ══════════════════════════════════════════ */
+  
   function buildModal() {
     var modal = document.createElement('div');
     modal.id = 'searchModal';
@@ -216,9 +207,7 @@
     return modal;
   }
 
-  /* ══════════════════════════════════════════
-     SEARCH LOGIC
-  ══════════════════════════════════════════ */
+  
   function search(query) {
     query = query.trim().toLowerCase();
     if (!query) return [];
@@ -233,7 +222,7 @@
     });
   }
 
-  /* Highlight matched terms in a string */
+  
   function highlight(text, query) {
     var terms = query.trim().split(/\s+/);
     var result = text;
@@ -245,7 +234,7 @@
     return result;
   }
 
-  /* Page label helper */
+  
   function pageLabel(page) {
     if (page === 'index.html')   return 'Home';
     if (page === 'about.html')   return 'About Us';
@@ -253,9 +242,7 @@
     return page;
   }
 
-  /* ══════════════════════════════════════════
-     RENDER RESULTS
-  ══════════════════════════════════════════ */
+  
   function renderResults(results, query, body) {
     if (!results.length) {
       body.innerHTML = '<p class="search-no-results">No results found for <strong>"' + query + '"</strong>.</p>';
@@ -282,9 +269,7 @@
     body.innerHTML = html;
   }
 
-  /* ══════════════════════════════════════════
-     INIT
-  ══════════════════════════════════════════ */
+  
   var modal, input, body, clearBtn;
   var isOpen = false;
 
@@ -295,7 +280,7 @@
       body     = document.getElementById('searchBody');
       clearBtn = document.getElementById('searchClearBtn');
 
-      /* Input handler */
+      
       input.addEventListener('input', function () {
         var q = input.value;
         clearBtn.style.display = q ? 'flex' : 'none';
@@ -306,7 +291,7 @@
         renderResults(search(q), q, body);
       });
 
-      /* Clear button */
+      
       clearBtn.addEventListener('click', function () {
         input.value = '';
         clearBtn.style.display = 'none';
@@ -314,13 +299,13 @@
         input.focus();
       });
 
-      /* Close button */
+      
       document.getElementById('searchCloseBtn').addEventListener('click', closeModal);
 
-      /* Backdrop click */
+      
       modal.querySelector('.search-modal-backdrop').addEventListener('click', closeModal);
 
-      /* Escape key */
+      
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && isOpen) closeModal();
       });
@@ -339,7 +324,7 @@
     isOpen = false;
   }
 
-  /* Attach to all .header-search triggers on the page */
+  
   document.addEventListener('DOMContentLoaded', function () {
     var triggers = document.querySelectorAll('.header-search');
     triggers.forEach(function (el) {

@@ -1,9 +1,4 @@
-/* ============================================
-   MAIN.CSS — Shared styles for all pages
-   SPSPS Faculty of Law — 2026 Bar Operations
-   ============================================ */
 
-/* ── VARIABLES ── */
 :root {
   --green-dark:  #1e3a1e;
   --green-mid:   #2a4a2a;
@@ -20,13 +15,13 @@
   --max-w:       960px;
 }
 
-/* ── RESET ── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 img  { display: block; max-width: 100%; }
 a    { text-decoration: none; color: inherit; }
 
-/* ── BODY ── */
+
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: var(--cream);
@@ -46,7 +41,7 @@ body::before {
   pointer-events: none;
 }
 
-/* ── HEADER ── */
+
 .site-header {
   background: var(--white);
   border-bottom: 1px solid #e0e0d8;
@@ -76,7 +71,7 @@ body::before {
 .header-search:hover { background: var(--gold-light); }
 .header-search svg { width: 14px; height: 14px; flex-shrink: 0; }
 
-/* ── NAV ── */
+
 .site-nav { background: var(--green-dark); }
 .nav-inner {
   width: 100%;
@@ -96,7 +91,7 @@ body::before {
 .site-nav a:hover      { background: rgba(255,255,255,0.07); color: #fff; }
 .site-nav a.active     { background: var(--gold); color: var(--white); font-weight: 600; }
 
-/* ── FOOTER ── */
+
 .site-footer {
   position: relative;
   background-color: var(--green-dark);
@@ -154,7 +149,7 @@ body::before {
   color: rgba(255,255,255,0.25);
 }
 
-/* ── RESPONSIVE ── */
+
 @media (max-width: 640px) {
   .header-inner { padding: 10px 4%; }
   .header-brand .barops-title { font-size: 17px; }
@@ -174,14 +169,10 @@ body::before {
   .footer-grid { padding: 0 4% 20px; gap: 16px; }
   .footer-bottom { padding: 0 4%; }
 }
-/* ══════════════════════════════════════════
-   SEARCH MODAL
-   ══════════════════════════════════════════ */
 
-/* Prevent body scroll when modal is open */
 body.search-open { overflow: hidden; }
 
-/* Modal root — hidden by default */
+
 .search-modal {
   display: none;
   position: fixed;
@@ -190,7 +181,7 @@ body.search-open { overflow: hidden; }
 }
 .search-modal.is-open { display: block; }
 
-/* Backdrop */
+
 .search-modal-backdrop {
   position: absolute;
   inset: 0;
@@ -199,7 +190,7 @@ body.search-open { overflow: hidden; }
   -webkit-backdrop-filter: blur(3px);
 }
 
-/* Modal box */
+
 .search-modal-box {
   position: absolute;
   top: clamp(60px, 10vh, 120px);
@@ -215,7 +206,7 @@ body.search-open { overflow: hidden; }
   max-height: 70vh;
 }
 
-/* Header — input row */
+
 .search-modal-header {
   display: flex;
   align-items: center;
@@ -285,14 +276,14 @@ body.search-open { overflow: hidden; }
 }
 .search-close-btn:hover { background: var(--green-pale); }
 
-/* Body — results area */
+
 .search-modal-body {
   overflow-y: auto;
   flex: 1;
   padding: 12px 16px 16px;
 }
 
-/* Hint / no-results text */
+
 .search-hint,
 .search-no-results {
   font-family: 'Montserrat', sans-serif;
@@ -303,7 +294,7 @@ body.search-open { overflow: hidden; }
 }
 .search-no-results strong { color: var(--text); }
 
-/* Results count */
+
 .search-count {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
@@ -314,7 +305,7 @@ body.search-open { overflow: hidden; }
   border-top: 1px solid #e8e8e0;
 }
 
-/* Results list */
+
 .search-results-list {
   list-style: none;
   display: flex;
@@ -322,7 +313,7 @@ body.search-open { overflow: hidden; }
   gap: 4px;
 }
 
-/* Individual result */
+
 .search-result-item {
   display: flex;
   flex-direction: column;
@@ -358,7 +349,7 @@ body.search-open { overflow: hidden; }
   line-height: 1.5;
 }
 
-/* Highlight matches */
+
 .search-results-list mark {
   background: var(--gold-light);
   color: var(--green-dark);
@@ -367,7 +358,7 @@ body.search-open { overflow: hidden; }
   font-style: normal;
 }
 
-/* ── MOBILE ── */
+
 @media (max-width: 640px) {
   .search-modal-box {
     top: 48px;

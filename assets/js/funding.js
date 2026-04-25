@@ -1,16 +1,8 @@
-/* ============================================
-   FUNDING.JS — Scripts exclusive to funding.html
-   SPSPS Faculty of Law — 2026 Bar Operations
-   ============================================ */
+
 
 (function () {
 
-  /* ══════════════════════════════════════════
-     PRODUCT DATA
-     Each product group shares a name, price, sizes.
-     Colors array: { label, swatch, img, imgAlt }
-     The first color is the default shown.
-  ══════════════════════════════════════════ */
+  
   var PRODUCTS = [
     {
       key:   'tote',
@@ -77,9 +69,7 @@
     }
   ];
 
-  /* ══════════════════════════════════════════
-     ACTIVE CARD ELEMENTS
-  ══════════════════════════════════════════ */
+  
   var activeImg    = document.getElementById('merchActiveImg');
   var activeName   = document.getElementById('merchActiveName');
   var activePrice  = document.getElementById('merchActivePrice');
@@ -88,19 +78,19 @@
   var activeColors = document.getElementById('merchActiveColors');
   var othersTrack  = document.getElementById('merchOthersTrack');
 
-  if (!activeImg) return; // merch section not on this page
+  if (!activeImg) return; 
 
-  /* Track which product key is currently shown */
+  
   var currentKey = PRODUCTS[0].key;
 
-  /* ── Render the active card for a given product + color index ── */
+  
   function showProduct(product, colorIdx) {
     colorIdx = colorIdx || 0;
     currentKey = product.key;
 
     var color = product.colors[colorIdx];
 
-    /* Fade-swap the image */
+    
     activeImg.classList.add('swapping');
     setTimeout(function () {
       activeImg.src = color.img;
@@ -108,13 +98,13 @@
       activeImg.classList.remove('swapping');
     }, 200);
 
-    /* Name (handle \n line breaks) */
+    
     activeName.innerHTML = product.name.replace(/\n/g, '<br>');
 
-    /* Price */
+    
     activePrice.innerHTML = '<sup>Php</sup>' + product.price;
 
-    /* Sizes */
+    
     sizeLabel.textContent = product.sizeLabel;
     activeSizes.innerHTML = '';
     product.sizes.forEach(function (s) {
@@ -124,7 +114,7 @@
       activeSizes.appendChild(tag);
     });
 
-    /* Color swatches */
+   
     activeColors.innerHTML = '';
     product.colors.forEach(function (c, i) {
       var sw = document.createElement('span');
@@ -152,7 +142,7 @@
     updateOthers();
   }
 
-  /* ── Build / refresh the "Check Out Other Items" strip ── */
+  
   function updateOthers() {
     othersTrack.innerHTML = '';
 
@@ -177,7 +167,7 @@
 
       if (p.key !== currentKey) {
         thumb.addEventListener('click', function () {
-          /* Scroll merch section into view gently */
+          
           var section = document.getElementById('merch');
           if (section) {
             var top = section.getBoundingClientRect().top + window.scrollY - 80;
@@ -191,12 +181,10 @@
     });
   }
 
-  /* ── Init with first product ── */
+  
   showProduct(PRODUCTS[0], 0);
 
-  /* ══════════════════════════════════════════
-     FADE-IN ON SCROLL
-  ══════════════════════════════════════════ */
+  
   var fadeEls = document.querySelectorAll('.fade-up');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {

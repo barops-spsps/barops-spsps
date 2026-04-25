@@ -1,11 +1,8 @@
-/* ============================================
-   HOME.JS — Scripts exclusive to index.html
-   SPSPS Faculty of Law — 2026 Bar Operations
-   ============================================ */
+
 
 (function () {
 
-  /* ── HERO CAROUSEL ── */
+  
   var slides      = document.querySelectorAll('.carousel-slide');
   var dots        = document.querySelectorAll('.carousel-dot');
   var progressBar = document.getElementById('progressBar');
@@ -80,7 +77,7 @@
     if (Math.abs(dx) > 40) { stopAuto(); dx < 0 ? next() : prev(); startAuto(); }
   }, { passive: true });
 
-  /* ── JOIN US CAROUSEL ── */
+  
   (function () {
     var jSlides  = document.querySelectorAll('.join-carousel-slide');
     var jDots    = document.querySelectorAll('.join-carousel-dot');
@@ -130,7 +127,7 @@
     jCarousel.addEventListener('mouseenter', jStopAuto);
     jCarousel.addEventListener('mouseleave', jStartAuto);
 
-    /* Touch swipe support */
+    
     var jtx = 0;
     jCarousel.addEventListener('touchstart', function (e) { jtx = e.touches[0].clientX; }, { passive: true });
     jCarousel.addEventListener('touchend', function (e) {
@@ -138,7 +135,7 @@
       if (Math.abs(dx) > 30) { jStopAuto(); dx < 0 ? jNext() : jPrev(); jStartAuto(); }
     }, { passive: true });
 
-    /* Only start auto-advancing once the section is near the viewport */
+    
     if ('IntersectionObserver' in window) {
       var joinObserver = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting) {
@@ -152,14 +149,13 @@
     }
   }());
 
-  /* ── FACEBOOK IFRAME — lazy injection ── */
+  
   (function () {
     var placeholder = document.getElementById('fbPlaceholder');
     var outer       = document.getElementById('fbScaleWrap');
     if (!placeholder || !outer) return;
 
-    /* FB_W: native width of the FB plugin iframe.
-       FB_H: used only for mobile scale fallback height. */
+   
     var FB_W = 500, FB_H = 480;
     var injected = false;
 
@@ -168,11 +164,11 @@
       if (!wrap) return;
       var available = outer.offsetWidth;
       if (available >= FB_W) {
-        /* Desktop: remove any inline height — CSS flex stretches the card */
+        
         wrap.style.transform = 'none';
         outer.style.height   = '';
       } else {
-        /* Mobile: scale down to fit the narrower column */
+        
         var scale = available / FB_W;
         wrap.style.transform      = 'scale(' + scale + ')';
         wrap.style.transformOrigin = 'top left';
@@ -220,7 +216,7 @@
                  + '&small_header=true&adapt_container_width=true'
                  + '&hide_cover=false&show_facepile=false&appId';
       iframe.width          = '500';
-      /* Tall enough that the clip never shows blank space regardless of screen height */
+      
       iframe.height         = '1400';
       iframe.style.cssText  = 'border:none;overflow:hidden;display:block;margin-top:-73px;';
       iframe.scrolling      = 'no';
@@ -259,7 +255,7 @@
     }
   }());
 
-  /* ── FADE-IN ON SCROLL ── */
+  
   var fadeEls = document.querySelectorAll('.fade-up');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -275,7 +271,7 @@
     fadeEls.forEach(function (el) { el.style.animationPlayState = 'running'; });
   }
 
-  /* ── INIT ── */
+  
   startAuto();
 
 }());

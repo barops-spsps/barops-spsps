@@ -7,7 +7,7 @@
   <title>About Us — SPSPS Faculty of Law 2026 Bar Operations</title>
   <meta name="description" content="About SPSPS Faculty of Law 2026 Bar Operations." />
 
-  <!-- ✅ Preload this page's above-the-fold images (moved here from index.html where it didn't belong) -->
+  
   <link rel="preload" as="image" href="assets/images/hero/about-hero-bg.webp">
   <link rel="preload" as="image" href="assets/images/logos/sidhaya-logo.webp">
 
@@ -50,16 +50,16 @@
 
   <main>
 
-    <!-- HERO -->
+   
     <section class="about-hero" aria-label="About Us Hero">
       <div class="about-hero-content">
-        <!-- Eager: this is the first visible element above the fold -->
+        
         <img class="about-hero-logo" src="assets/images/logos/sidhaya-logo.webp" alt="Sidhaya — onto greater things"
           fetchpriority="high">
       </div>
     </section>
 
-    <!-- ABOUT US TEXT -->
+   
     <div class="about-content">
       <span class="about-badge">About Us</span>
       <p class="about-description">
@@ -71,15 +71,11 @@
       </p>
     </div>
 
-    <!-- INFINITE CARD CAROUSEL -->
+    
     <section class="carousel-section" aria-label="Sidhaya symbol cards">
       <div class="carousel-track-wrap">
         <div class="carousel-track">
-          <!--
-            ✅ First 2 cards: eager (likely visible in the initial viewport).
-               All others: lazy (the CSS animation will have moved on before they're needed).
-               Duplicate set (aria-hidden): always lazy since they're the second pass.
-          -->
+          
           <div class="carousel-card">
             <img src="assets/images/cards/card-1.webp" alt="Sidhaya — name and meaning">
           </div>
@@ -100,7 +96,7 @@
           <div class="carousel-card">
             <img src="assets/images/cards/card-6.webp" alt="Landscape / Field — journey and progress" loading="lazy">
           </div>
-          <!-- Duplicated set for seamless loop — all lazy -->
+         
           <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-1.webp" alt=""
               loading="lazy"></div>
           <div class="carousel-card" aria-hidden="true"><img src="assets/images/cards/card-2.webp" alt=""
@@ -117,10 +113,10 @@
       </div>
     </section>
 
-    <!-- EXECUTIVE COMMITTEE -->
+    
     <section class="committee-section" aria-labelledby="committee-heading">
 
-      <!-- EXEC BANNER IMAGE -->
+      
       <div class="exec-banner">
         <img src="assets/images/committee/exec.png" alt="The Executive Committee — Floramay Q. Bacus, Bar Operations Chairperson and Dien Pearl Cada, Vice Chairperson" loading="lazy">
       </div>
@@ -193,9 +189,9 @@
               With Trina, what she learns doesn't just stay with her – it's something she brings back to help the whole
               class and the SPSPS community grow.</p>
           </div>
-        </div><!-- /.member-grid--row1 -->
+        </div>
         <div class="member-dots" id="memberDots1" role="tablist" aria-label="Row 1 member navigation"></div>
-      </div><!-- /.member-row--row1 -->
+      </div>
 
       <div class="member-row member-row--row2">
         <div class="member-swipe-hint" id="swipeHint2" aria-hidden="true">
@@ -265,9 +261,9 @@
               everything gets done the right way. With him, there is no room for
               mediocrity.</p>
           </div>
-        </div><!-- /.member-grid--row2 -->
+        </div>
         <div class="member-dots" id="memberDots2" role="tablist" aria-label="Row 2 member navigation"></div>
-      </div><!-- /.member-row--row2 -->
+      </div>
 
     </section>
 
